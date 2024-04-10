@@ -1,5 +1,6 @@
-﻿Console.WriteLine("Введите массив строк через запятую :");
-Console.WriteLine();
+﻿Console.Clear();
+Console.Write("Введите массив строк через запятую : ");
+
 string stroka = Console.ReadLine()!;
 string [] mass = stroka.Split(',');
 var newmass = new string [mass.Length];
@@ -15,3 +16,6 @@ for (int i = 0; i < mass.Length; i++)
     }
 
 }
+
+Array.Resize(ref newmass, index);
+Console.Write(" → " + "["+string.Join(",", newmass) + "]");
